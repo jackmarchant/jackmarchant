@@ -20,7 +20,6 @@ defmodule JackMarchant.PostReader do
       |> File.read!()
       |> String.split("---")
       |> List.delete_at(0)
-      |> IO.inspect()
 
     metadata
     |> process_metadata()
