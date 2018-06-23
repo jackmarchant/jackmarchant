@@ -25,13 +25,6 @@
   font-size: 32px;
 }
 
-.button--read-more {
-  margin-top: 12px;
-  margin-bottom: 12px;
-  display: inline-block;
-}
-
-/* button */
 .button {
   background-color: #202020;
   color: #ffffff;
@@ -43,6 +36,11 @@
   padding: 8px 12px;
 }
 
+.button--read-more {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
 
 /* Page */
 

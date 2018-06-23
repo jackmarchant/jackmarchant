@@ -5,6 +5,7 @@ body {
 
 p {
   line-height: 1.5;
+  font-size: 18px;
 }
 
 a {
@@ -12,14 +13,54 @@ a {
 }
 
 pre {
-  background-color: #efefef;
-  padding: 12px;
+  background-color: #f7f9fc;
   border-radius: 3px;
+  border: 1px solid #d2ddee;
   font-family: Courier New, monospace;
   overflow: auto;
+  padding: 12px;
   -webkit-overflow-scrolling: touch;
+}
+
+code.inline {
+  font-size: 16px;
 }
 
 .header__link {
   display: inline-flex;
+}
+
+.header {
+  padding-top: 20px;
+}
+
+.footer__bio {
+  background-color: #f7f6f6;
+  border-left: 3px solid #202020;
+  margin-bottom: 24px;
+  padding: 12px;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    margin: 0 auto;
+    width: 760px;
+  }
+
+  pre {
+    padding: 24px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+  }
+
+  .header {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
