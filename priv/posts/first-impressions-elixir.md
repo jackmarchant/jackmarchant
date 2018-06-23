@@ -26,7 +26,7 @@ I have twisted and turned through it all, trying to figure out what FP means, an
 
 Now you know why I’m interested in learning a functional programming language such as Elixir, let’s go on a mythical journey together to see what I’ve learned.
 
-### Learning new things is hard
+## Learning new things is hard
 
 One of the best things I’ve noticed about Elixir – given at this point in time I’ve used it for about a week – is that it’s incredibly focussed on developer experience.
 
@@ -44,7 +44,7 @@ That’s plenty of things. What more do you want?
 
 All of this makes it easier for a willing developer to pick up Elixir and give it a go. Nobody wants to be fiddling around with their development environment in a shameful attempt to start learning a new language.
 
-### FP is FP
+## FP is FP
 
 Functional programming is fucking powerful. It shouldn’t be underestimated. I don’t want to spend any more than 3 seconds walking through my code (and dissecting my brain that day) because I wasn’t bothered to create a function with a clear interface and signature. I am starting to think a function with more than say, 10 lines, is too long and doing too much.
 
@@ -54,7 +54,7 @@ Given that Elixir is an FP language it makes sense that all of the Elixir module
 
 It’s interesting that I haven’t seen more people checking out Functional languages after discovering the power of it in JavaScript. Maybe they just haven’t written a kickass article about it?
 
-### WTF? (What the feature?!)
+## WTF? (What the feature?!)
 
 In keeping with Elixir’s functional ties, there’s a feature called Pattern Matching, which I’m very excited to learn more about. I don’t think this is an Elixir-only feature but it’s certainly the first time I have come across it.
 
@@ -66,7 +66,7 @@ My instinct would have been to use an if statement to check whether there are it
 
 This concept separates the two cases into two functions, rather than having one function that handles all cases. As a beginner that is a difficult thing to realise but I’m interested to see whether it improves code readability.
 
-### Where do we go ? (Where do we go now)
+## Where do we go ? (Where do we go now)
 
 Functional programming has been around for ages, but as software engineering on the web matures, developers begin to question how we’ve done things and look for something better.
 
@@ -79,7 +79,7 @@ Elixir sounds like a new challenge to me and has some good things going for it. 
 - The developer experience seems to have been thought out – making it appealing and easy to get started.
 - The package management system, including package distribution seems similar to NPM.
 
-### So far
+## So far
 
 If you’ve read this far, I congratulate you on your job well done. Take the rest of the day off.
 

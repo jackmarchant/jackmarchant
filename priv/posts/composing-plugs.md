@@ -9,7 +9,7 @@ published_date: 2018-03-23 20:08:00
 Elixir is a functional language, so it’s no surprise that one of the main building blocks of the request-response cycle is the humble Plug. A Plug will take connection struct (see [Plug.Conn](https://hexdocs.pm/plug/Plug.Conn.html)) and return a new struct of the same type. It is this concept that allows you to join multiple plugs together, each with their own transformation on a Conn struct.
 A plug can be either a function or a module that implements the Plug behaviour.
 
-### What is a Plug?
+## What is a Plug?
 Before we get to know Plug, add it as a dependency to your project’s mix.exs file: `{:plug, "~> 1.5"}` and run `mix deps.get` to install it.
 A Plug has the following structure:
 ```
@@ -27,7 +27,7 @@ end
 In this example, we’re adding a :user map to the current session data. The two main functions are `init/1` and `call/2` both of which are part of the Plug behaviour, defined in `plug.ex`.
 `init/1` is used to initialise the plug with options that can be used in the `call/2` function. `call/2` is the meat of the plug, where you take a `%Plug.Conn{}` struct and return a new one.
 
-### How to use a Plug
+## How to use a Plug
 You can use a Plug in a your application’s router. It might look something like this:
 ```
 defmodule MyApp.Router do
@@ -42,7 +42,7 @@ end
 ```
 Now, when you visit `/` in your application, it will run `AuthenticateUserSession.call/2` and as we defined earlier, it will add a user map into the session data.
 
-### How to combine multiple Plugs
+## How to combine multiple Plugs
 When building an application, you might need to do more than just adding a user to a session. Rather than extending upon the AuthenticateUserSession plug, you can create a new plug that will do the specific job you need it to. This allows us to compose plugs that are discrete and makes sure we’re following the [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle).
 
 With Elixir plugs, we can combine multiple plugs in a `:pipeline` that can group functionality together.

@@ -34,7 +34,8 @@ defmodule JackMarchant.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      {:earmark, "~> 1.2"}
+      {:earmark, "~> 1.2"},
+      {:timex, "~> 3.0"}
     ]
   end
 

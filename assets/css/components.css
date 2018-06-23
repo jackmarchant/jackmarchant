@@ -21,8 +21,16 @@
 }
 
 /* Post */
+
 .post__title {
   font-size: 32px;
+  margin-bottom: 0;
+}
+
+.post__date {
+  font-style: italic;
+  font-size: 14px;
+  margin-top: 0;
 }
 
 .button {

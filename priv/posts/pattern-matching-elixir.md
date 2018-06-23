@@ -24,29 +24,29 @@ Technically you can do the same thing in Elixir, but how the compiler interprets
 Tuples are used frequently in Elixir code to enable returning multiple values from a function. Typically, you would come across a {status, value} tuple, for example:
 
 ```
-{:ok, return\_value} = do\_stuff()
+{:ok, return_value} = do_stuff()
 ```
 
-do\_stuff() must return a tuple which matches that structure (otherwise Elixir will raise a ‘MatchError’), and return\_value is now bound to the second item in the tuple returned from this function.
+`do_stuff()` must return a tuple which matches that structure (otherwise Elixir will raise a ‘MatchError’), and return_value is now bound to the second item in the tuple returned from this function.
 
 This is basically how pattern matching works, but the real beauty is how you use it in various contexts, for example:
 
 - When a function can return multiple values, such as the {status, value} tuple we came across earlier:
 
 ```
-case do\_stuff() do
+case do_stuff() do
  {:ok, value} -> value
- {:error, \_} -> raise "Oh no!"
+ {:error, _} -> raise "Oh no!"
 end
 ```
 
 - In function heads you can pattern match on parameters, to only run when particular requirements are met:
 
 ```
-def my\_func({:ok, value}), do: value
-def my\_func({:error, \_}), do: raise "Oops!"
+def my_func({:ok, value}), do: value
+def my_func({:error, _}), do: raise "Oops!"
 
-IO.puts my\_func({:ok, "hello"}) # "hello"
+IO.puts my_func({:ok, "hello"}) # "hello"
 ```
 
 - You can even match on lists:
@@ -57,9 +57,7 @@ IO.puts my\_func({:ok, "hello"}) # "hello"
 
 - And decompose data structures
 
-```
-%{value: value} = map\_func()
-```
+`%{value: value} = map_func()`
 
 There are so many examples of pattern matching in Elixir because it’s incredibly useful and powerful, and also very performant when compared to traditional methods.
 
