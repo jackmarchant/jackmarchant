@@ -1,9 +1,19 @@
 defmodule JackMarchant do
   @moduledoc """
-  JackMarchant keeps the contexts that define your domain
-  and business logic.
-
-  Contexts are also responsible for managing your data, regardless
-  if it comes from the database, an external API or others.
+  JackMarchant domain logic
   """
+
+  import Ecto.Query
+
+  def get_all_posts do
+    JackMarchant.Post
+    |> where(published: true)
+    |> JackMarchant.Repo.all()
+  end
+
+  def find_post_by_slug(slug) do
+    JackMarchant.Post
+    |> where(slug: ^slug)
+    |> JackMarchant.Repo.one()
+  end
 end

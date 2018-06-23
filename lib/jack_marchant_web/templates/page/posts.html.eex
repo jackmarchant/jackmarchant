@@ -4,8 +4,8 @@
   <%= for post <- assigns.posts do %>
 
   <div class="post-listing">
-    <h3 class="post-listing__title"><a href="<%= post.slug %>"><%= post.title %></a></h3>
-    <p class="post-listing__date"><%= post.published_date %></p>
+    <h3 class="post-listing__title"><a href="/articles/<%= post.slug %>"><%= post.title %></a></h3>
+    <p class="post-listing__date"><%= NaiveDateTime.to_date(post.published_date) %></p>
     <p class="post-listing__blurb"><%= post.blurb %></p>
   </div>
 
