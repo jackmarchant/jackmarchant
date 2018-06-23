@@ -1,0 +1,55 @@
+
+/* Post Listing */
+
+.post-listing {
+  margin-bottom: 10px;
+}
+
+.post-listing__title {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+.post-listing__date {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.post-listing__blurb, .post-listing__date {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Post */
+.post__title {
+  font-size: 32px;
+}
+
+.button--read-more {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+/* button */
+.button {
+  background-color: #202020;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  padding: 8px 12px;
+}
+
+
+/* Page */
+
+.page-title {
+  font-size: 42px;
+}
+
+.social-link {
+  margin-right: 8px;
+}

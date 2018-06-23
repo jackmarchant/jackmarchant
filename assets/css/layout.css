@@ -1,0 +1,25 @@
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    margin: 0 auto;
+    width: 760px;
+  }
+}
+
+/**
+ * Grid container.
+ */
+
+ .flex-grid {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: -12px;
+}
+
+/**
+ * Grid items.
+ */
+
+.flex-grid__item {
+  flex-basis: auto;
+  padding-left: 12px;
+}

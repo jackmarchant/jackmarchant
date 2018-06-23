@@ -1,0 +1,6 @@
+<div class="post">
+  <h2 class="post__title"><%= assigns.post.title %></h2>
+  <div class="post__content"><%= raw assigns.post.content %></div>
+</div>
+
+<a class="button button--read-more" href="<%= page_path(@conn, :index) %>">See more articles</a>

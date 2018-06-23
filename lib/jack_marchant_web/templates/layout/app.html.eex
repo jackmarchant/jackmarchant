@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jack Marchant is a Web Developer based in Sydney, Australia.">
+    <meta name="author" content="Jack Marchant - Web Developer">
+
+    <title>Jack Marchant - Web Developer</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="flex-grid">
+          <a class="header__link" href="<%= page_path(@conn, :index) %>">
+            <div class="flex-grid__item">
+              <img width="80" height="80" src="<%= static_path(@conn, "/images/jack.jpg") %>" />
+            </div>
+            <div class="flex-grid__item">
+              <h1>Jack Marchant</h1>  
+            </div>
+          </a>
+        </div>
+      </header>
+
+      <main role="main">
+        <%= render @view_module, @view_template, assigns %>
+      </main>
+
+      <footer>
+        <h4>A note about the author</h4>
+        <p>Hi, my name is Jack Marchant. I'm a Web Developer based in Sydney, Australia.
+          I found Elixir while working at <a href="https://expert360.com" target="_blank" rel="nofollow">Expert360</a> and
+          so far have never looked back. I enjoy reading, writing and talking about code.
+        <p>
+        <a class="button social-link" href="https://twitter.com/jackmarchant10" target="_blank" rel="nofollow">Twitter</a>
+        <a class="button social-link" href="https://github.com/jackmarchant" target="_blank" rel="nofollow">GitHub</a>
+        <a class="button social-link" href="https://www.linkedin.com/in/jack-marchant" target="_blank" rel="nofollow">LinkedIn</a>
+      </footer>
+
+    </div> <!-- /container -->
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>

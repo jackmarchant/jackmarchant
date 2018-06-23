@@ -1,0 +1,25 @@
+body {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 16px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  color: #202020;
+}
+
+pre {
+  background-color: #efefef;
+  padding: 12px;
+  border-radius: 3px;
+  font-family: Courier New, monospace;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.header__link {
+  display: inline-flex;
+}
