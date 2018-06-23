@@ -5,15 +5,37 @@ defmodule JackMarchant do
 
   import Ecto.Query
 
+  alias JackMarchant.{Repo, Post}
+
   def get_all_posts do
-    JackMarchant.Post
+    Post
     |> where(published: true)
-    |> JackMarchant.Repo.all()
+    |> order_by(desc: :published_date)
+    |> Repo.all()
   end
 
   def find_post_by_slug(slug) do
-    JackMarchant.Post
+    Post
     |> where(slug: ^slug)
-    |> JackMarchant.Repo.one()
+    |> Repo.one()
+  end
+
+  def upsert_post(params) do
+    Post
+    |> Repo.get_by(slug: params.slug)
+    |> IO.inspect()
+    |> case do
+      nil ->
+        IO.inspect(params)
+
+        %Post{}
+        |> Post.changeset(params)
+        |> Repo.insert()
+
+      post ->
+        post
+        |> Post.changeset(params)
+        |> Repo.update()
+    end
   end
 end
