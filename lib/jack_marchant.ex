@@ -23,7 +23,6 @@ defmodule JackMarchant do
   def upsert_post(params) do
     Post
     |> Repo.get_by(slug: params.slug)
-    |> IO.inspect()
     |> case do
       nil ->
         IO.inspect(params)
