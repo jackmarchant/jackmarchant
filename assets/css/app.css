@@ -37,7 +37,8 @@ code.inline {
 .footer__bio {
   background-color: #f7f6f6;
   border-left: 3px solid #202020;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
+  margin-top: 48px;
   padding: 12px;
 }
 
