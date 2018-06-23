@@ -6,7 +6,7 @@ config :jack_marchant, JackMarchantWeb.Endpoint,
   url: [host: "jackmarchant.com", port: System.get_env("PORT")],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
-config :jackmarchant, JackMarchant.Repo,
+config :jack_marchant, JackMarchant.Repo,
   adapter: Ecto.Adapters.Postgres,
   pool_size: 10
 
