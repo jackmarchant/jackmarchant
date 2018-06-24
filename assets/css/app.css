@@ -17,7 +17,7 @@ a {
 }
 
 .header {
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 .footer__bio {
@@ -26,6 +26,15 @@ a {
   margin-bottom: 48px;
   margin-top: 48px;
   padding: 12px;
+}
+
+.footer__signup {
+  border-top: 1px solid #cccccc;
+  margin-top: 24px;
+}
+
+.footer__signup p {
+  margin-bottom :0;
 }
 
 @media screen and (min-width: 1024px) {

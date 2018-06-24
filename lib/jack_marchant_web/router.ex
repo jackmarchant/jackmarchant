@@ -19,6 +19,9 @@ defmodule JackMarchantWeb.Router do
 
     get("/", PageController, :index)
     get("/articles/:slug", PageController, :post)
+    post("/subscribe", SubscribeController, :subscribe)
+
+    get("/:page", PageController, :index)
   end
 
   # Other scopes may use custom stacks.

@@ -1,0 +1,15 @@
+<%= form_for @conn, subscribe_path(@conn, :subscribe), fn f -> %>
+  <legend>
+    <h2>Subscribe</h2>
+    <p>Enter your email address and receive emails as soon as a new article is published.</p>
+  </legend>
+  <fieldset>
+    <div class="form-group">
+      <%= text_input f, :email, class: "form-field", placeholder: "name@example.com" %>
+    </div>
+  </fieldset>
+
+  <div class="form-group">
+    <%= submit "Subscribe", class: "button" %>
+  </div>
+<% end %>

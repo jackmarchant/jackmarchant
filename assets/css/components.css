@@ -76,6 +76,7 @@
   cursor: pointer;
   text-align: center;
   padding: 8px 12px;
+  font-size: 16px;
 }
 
 .button--read-more {
@@ -92,4 +93,26 @@
 
 .social-link {
   margin-right: 8px;
+}
+
+/* Alerts */
+.alert {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  border-bottom: 1px solid;
+  left: 0;
+  top: 0;
+}
+
+.alert--info {
+  background-color: #efefef;
+  border-color: #bcbcbc
+}
+
+.alert--error {
+  border-color: #906868;
+  background-color: #fb3f3f;
+  color: #ffffff;
 }

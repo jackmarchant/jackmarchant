@@ -5,7 +5,7 @@ defmodule JackMarchant do
 
   import Ecto.Query
 
-  alias JackMarchant.{Repo, Post}
+  alias JackMarchant.{Repo, Post, Subscriber}
 
   @spec get_all_posts() :: list(Post.t())
   def get_all_posts do
@@ -37,5 +37,20 @@ defmodule JackMarchant do
         |> Post.changeset(params)
         |> Repo.update()
     end
+  end
+
+  @spec subscribe(map()) :: Subscriber.t()
+  def subscribe(params) do
+    %Subscriber{}
+    |> Subscriber.changeset(params)
+    |> Repo.insert()
+    |> case do
+      {:ok, _} = result -> result
+      {:error, changeset} -> {:error, get_errors(changeset.errors)}
+    end
+  end
+
+  defp get_errors(email: {error, _}) do
+    %{email: error}
   end
 end

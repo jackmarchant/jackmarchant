@@ -15,6 +15,8 @@
 
   <body>
     <div class="wrapper">
+      <%= render @view_module, "alerts.html", assigns %>
+      
       <%= render @view_module, "header.html", assigns %>
 
       <main role="main" class="main">

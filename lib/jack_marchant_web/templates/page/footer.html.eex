@@ -1,4 +1,7 @@
 <footer class="footer">
+  <div class="footer__signup">
+    <%= render @view_module, "subscribe-form.html", assigns %>
+  </div>
   <div class="footer__bio">
     <p>Hi, my name is Jack Marchant. I'm a Web Developer based in Sydney, Australia.
       I found Elixir while working at <a href="https://expert360.com" target="_blank" rel="nofollow">Expert360</a> and
