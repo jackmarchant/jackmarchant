@@ -15,47 +15,15 @@
 
   <body>
     <div class="wrapper">
-      <header class="header">
-        <div class="flex-grid">
-          <a class="header__link" href="<%= page_path(@conn, :index) %>">
-            <div class="flex-grid__item">
-              <img width="80" height="80" src="<%= static_path(@conn, "/images/jack.jpg") %>" />
-            </div>
-            <div class="flex-grid__item">
-              <h1>Jack Marchant</h1>  
-            </div>
-          </a>
-        </div>
-      </header>
+      <%= render @view_module, "header.html", assigns %>
 
       <main role="main" class="main">
         <%= render @view_module, @view_template, assigns %>
-        <footer class="footer">
-          <div class="footer__bio">
-            <p>Hi, my name is Jack Marchant. I'm a Web Developer based in Sydney, Australia.
-              I found Elixir while working at <a href="https://expert360.com" target="_blank" rel="nofollow">Expert360</a> and
-              so far have never looked back. I enjoy reading, writing and talking about code.
-            </p>
-          </div>
-          <div class="footer__links">
-            <a class="button social-link" href="https://twitter.com/jackmarchant10" target="_blank" rel="nofollow">Twitter</a>
-            <a class="button social-link" href="https://github.com/jackmarchant" target="_blank" rel="nofollow">GitHub</a>
-            <a class="button social-link" href="https://www.linkedin.com/in/jack-marchant" target="_blank" rel="nofollow">LinkedIn</a>
-          </div>
-          <p>Copyright &copy; <%= NaiveDateTime.utc_now().year %></p>
-        </footer>
+        <%= render @view_module, "footer.html", assigns %>
       </main>
 
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53035029-1"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+      <% render @view_module, "analytics.html", assigns %>
 
-        gtag('config', 'UA-53035029-1');
-      </script>
-
-    </div> <!-- /container -->
-    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+    </div>
   </body>
 </html>

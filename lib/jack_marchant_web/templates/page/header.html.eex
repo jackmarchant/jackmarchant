@@ -1,0 +1,12 @@
+<header class="header">
+  <div class="flex-grid">
+    <a class="header__link" href="<%= page_path(@conn, :index) %>">
+      <div class="flex-grid__item">
+        <img width="80" height="80" src="<%= static_path(@conn, "/images/jack.jpg") %>" />
+      </div>
+      <div class="flex-grid__item">
+        <h1>Jack Marchant</h1>  
+      </div>
+    </a>
+  </div>
+</header>
