@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Jack Marchant is a Web Developer based in Sydney, Australia.">
+    <meta name="description" content="Jack Marchant is a Web Developer based in Sydney, Australia. Jack writes code in Elixir, a functional programming language.">
     <meta name="author" content="Jack Marchant - Web Developer">
-
+    <link rel="shortcut icon" href="<%= static_path(@conn, "/favicon.ico") %>" type="image/x-icon">
+    <link rel="icon" href="<%= static_path(@conn, "/favicon.ico") %>" type="image/x-icon">
     <title>Jack Marchant - Web Developer</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">

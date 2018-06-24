@@ -33,6 +33,40 @@
   margin-top: 0;
 }
 
+/* Post content */
+
+.post__content pre {
+  background-color: #f7f9fc;
+  border-radius: 3px;
+  border: 1px solid #d2ddee;
+  font-family: Courier New, monospace;
+  overflow: auto;
+  padding: 12px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.post__content code.inline {
+  font-size: 16px;
+}
+
+.post__content ul {
+  padding-left: 24px;
+}
+
+.post__content li {
+  line-height: 1.5;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.post__content blockquote {
+  border-left: 3px solid #202020;
+  padding-left: 12px;
+  margin-left: 0;
+}
+
+/* Button */
+
 .button {
   background-color: #202020;
   color: #ffffff;

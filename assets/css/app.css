@@ -12,20 +12,6 @@ a {
   color: #202020;
 }
 
-pre {
-  background-color: #f7f9fc;
-  border-radius: 3px;
-  border: 1px solid #d2ddee;
-  font-family: Courier New, monospace;
-  overflow: auto;
-  padding: 12px;
-  -webkit-overflow-scrolling: touch;
-}
-
-code.inline {
-  font-size: 16px;
-}
-
 .header__link {
   display: inline-flex;
 }
