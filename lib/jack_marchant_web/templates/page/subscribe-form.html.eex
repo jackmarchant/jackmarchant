@@ -5,7 +5,7 @@
   </legend>
   <fieldset>
     <div class="form-group">
-      <%= text_input f, :email, class: "form-field", placeholder: "name@example.com" %>
+      <%= text_input f, :email, class: "form-field", placeholder: "name@example.com", required: true %>
     </div>
   </fieldset>
 
