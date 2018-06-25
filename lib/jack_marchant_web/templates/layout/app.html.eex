@@ -24,7 +24,7 @@
         <%= render @view_module, "footer.html", assigns %>
       </main>
 
-      <% render @view_module, "analytics.html", assigns %>
+      <%= render @view_module, "analytics.html", assigns %>
 
     </div>
   </body>
