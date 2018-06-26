@@ -41,7 +41,6 @@ end
 ```
 
 - In function heads you can pattern match on parameters, to only run when particular requirements are met:
-
 ```
 def my_func({:ok, value}), do: value
 def my_func({:error, _}), do: raise "Oops!"
@@ -50,14 +49,14 @@ IO.puts my_func({:ok, "hello"}) # "hello"
 ```
 
 - You can even match on lists:
-
 ```
 [first, second, third] = [1, 2, 3]
 ```
 
 - And decompose data structures
-
-`%{value: value} = map_func()`
+```
+%{value: value} = map_func()
+```
 
 There are so many examples of pattern matching in Elixir because it’s incredibly useful and powerful, and also very performant when compared to traditional methods.
 

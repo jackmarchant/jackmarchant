@@ -20,47 +20,7 @@ It’s great for testing because we can make assumptions and set expectations ba
 
 __An example of simple testing:__
 
-```
-import { it } from 'mocha';
-import { expect } from 'chai';
-
-/**
- * Add numbers together
- *
- * @param {int} numbers One or many numbers to add
- */
-const add = (...numbers) => {
-  return numbers.reduce((acc, val) => {
-    return acc + val;
-  }, 0);
-};
-
-it('should add numbers', () => {
-  const expected = 15;
-  const actual = add(1, 2, 3, 4, 5);
-
-  expect(actual).to.equal(expected); // true
-});
-
-/**
- * Subtract numbers from an initial number
- *
- * @param {int} initialNumber The number we start from when subtracting
- * @param {int} numbers       One or many numbers to subtract
- */
-const minus = (initialNumber, ...numbers) => {
-  return numbers.reduce((acc, val) => {
-    return acc - val;
-  }, initialNumber);
-};
-
-it('should minus numbers', () => {
-  const expected = 5;
-  const actual = minus(15, 5, 3, 2);
-
-  expect(actual).to.equal(expected); // true
-});
-```
+<script src="https://gist.github.com/jackmarchant/651a8bcb69c6f13bbe9acb797f063b6c.js"></script>
 
 You can go as far with these tests as you like. If we wanted to we could add tests for what happens when the add and minus functions are passed values that are not numbers, does it need to deal with negative numbers?
 
