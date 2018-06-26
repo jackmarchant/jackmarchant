@@ -7,7 +7,8 @@ defmodule JackMarchantWeb.PageView do
     |> get_date_text(datetime)
   end
 
-  defp get_date_text(days_ago, _) when days_ago == 0, do: "today"
-  defp get_date_text(days_ago, _) when days_ago < 30, do: "#{days_ago} days ago"
+  defp get_date_text(days, _) when days == 0, do: "today"
+  defp get_date_text(days, _) when days == 1, do: "yesterday"
+  defp get_date_text(days, _) when days < 30, do: "#{days} days ago"
   defp get_date_text(_, datetime), do: Timex.format!(datetime, "{D} {Mshort} {YY}")
 end
