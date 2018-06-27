@@ -47,6 +47,9 @@
 
 .post__content code.inline {
   font-size: 16px;
+  background-color: rgba(0,0,0,.05);
+  padding: 3px 4px;
+  border-radius: 3px;
 }
 
 .post__content ul {
