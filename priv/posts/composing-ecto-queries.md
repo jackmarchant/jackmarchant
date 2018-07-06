@@ -31,11 +31,12 @@ You may have noticed in the first query we started off using the Ecto.Schema we 
 
 With great queries comes great responsibility, fortunately Ecto makes it easy to do joins without breaking a sweat. 
 Let's say we also have a songs table, and each record has an album_id to relate it to an album. 
-If we wanted to get a list of songs, with the name of the album they belong to, we could do that with the following query:
+If we wanted to get a list of albums, where the songs in that album are longer than a certain number of seconds, we could do that with the following query:
 
 <script src="https://gist.github.com/jackmarchant/3bb7622f6d4ebfca90364bc589e98b63.js"></script>
 
-There's a few things going on here, but the result is a list of tuples, where the first element is the name of the album the song belongs to, and the second element is the song record. 
+There's a few things going on here, but the main part is using a function to join on the songs table and scope the query for albums to return only the ones with songs where they are longer than a certain integer.
+This pattern is useful for abstracting lower levels of a query into smaller parts, so you can join them up in a function that has a bit more context. Typically, you might have done this before with functions, but each function call would itself have gone to the database and you'd use an enumerable to filter results.
 
 This type of composition is made possible through Ecto query bindings. These are the references to schemas that have been added to a query, in a list ordered in the same way in which they were added. 
 The order matters in query bindings, which can make it difficult to do multiple joins across different functions in the same way we split our query out into functions before.
