@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <%= if assigns.post != nil do %>
+    <%= if Map.has_key?(assigns, :post) do %>
       <meta property="og:title" content="<%= assigns.post.title %>" />
       <meta property="og:site_name" content="Jack Marchant - Web Developer" />
       <meta property="og:type" content="blog" />
@@ -17,7 +17,7 @@
     <meta name="author" content="Jack Marchant - Web Developer">
     <link rel="shortcut icon" href="<%= static_path(@conn, "/favicon.ico") %>" type="image/x-icon">
     <link rel="icon" href="<%= static_path(@conn, "/favicon.ico") %>" type="image/x-icon">
-    <%= if assigns.post != nil do %>
+    <%= if Map.has_key?(assigns, :post) do %>
       <title><%= assigns.post.title %> - Jack Marchant</title>
     <% else %>
       <title>Jack Marchant - Web Developer</title>
