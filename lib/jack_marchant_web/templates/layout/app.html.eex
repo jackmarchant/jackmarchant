@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="<%= static_path(@conn, "/favicon.ico") %>" type="image/x-icon">
     <link rel="icon" href="<%= static_path(@conn, "/favicon.ico") %>" type="image/x-icon">
     <%= if assigns.post != nil do %>
-      <title><%= assigns.post.title %> - Jack Marchant %></title>
+      <title><%= assigns.post.title %> - Jack Marchant</title>
     <% else %>
       <title>Jack Marchant - Web Developer</title>
     <% end %>
