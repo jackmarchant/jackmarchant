@@ -5,7 +5,14 @@ defmodule JackMarchant do
 
   import Ecto.Query
 
-  alias JackMarchant.{Repo, Post, Subscriber}
+  alias JackMarchant.{
+    Repo,
+    Post,
+    Subscriber,
+    CampaignMonitor
+  }
+
+  require Logger
 
   @spec get_all_posts() :: list(Post.t())
   def get_all_posts do
@@ -45,9 +52,20 @@ defmodule JackMarchant do
     |> Subscriber.changeset(params)
     |> Repo.insert()
     |> case do
-      {:ok, _} = result -> result
-      {:error, changeset} -> {:error, get_errors(changeset.errors)}
+      {:ok, subscriber} = result ->
+        campaign_monitor_subscribe(subscriber)
+        result
+
+      {:error, changeset} ->
+        {:error, get_errors(changeset.errors)}
     end
+  end
+
+  defp campaign_monitor_subscribe(%{email: _} = subscriber) do
+    spawn(fn ->
+      {:ok, _} = CampaignMonitor.add_subscriber(subscriber)
+      Logger.info(fn -> "Added subscriber to email list" end)
+    end)
   end
 
   defp get_errors(email: {error, _}) do

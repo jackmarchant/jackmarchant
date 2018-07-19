@@ -35,7 +35,9 @@ defmodule JackMarchant.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:earmark, "~> 1.2"},
-      {:timex, "~> 3.0"}
+      {:timex, "~> 3.0"},
+      {:httpoison, "~> 1.2"},
+      {:jason, "~> 1.1"}
     ]
   end
 
