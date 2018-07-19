@@ -37,7 +37,8 @@ defmodule JackMarchant.Mixfile do
       {:earmark, "~> 1.2"},
       {:timex, "~> 3.0"},
       {:httpoison, "~> 1.2"},
-      {:jason, "~> 1.1"}
+      {:jason, "~> 1.1"},
+      {:ex_campaign_monitor, "~> 0.1"}
     ]
   end
 

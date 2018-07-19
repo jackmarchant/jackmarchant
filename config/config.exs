@@ -20,7 +20,7 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
-config :jack_marchant, :ex_campaign_monitor,
+config :ex_campaign_monitor,
   api_key: System.get_env("CAMPAIGN_MONITOR_API_KEY"),
   list_id: System.get_env("CAMPAIGN_MONITOR_LIST_ID")
 
