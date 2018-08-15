@@ -4,7 +4,7 @@ defmodule JackMarchant.Mixfile do
   def project do
     [
       app: :jack_marchant,
-      version: "1.0.0",
+      version: "1.0.3",
       elixir: "~> 1.6",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
@@ -38,7 +38,8 @@ defmodule JackMarchant.Mixfile do
       {:timex, "~> 3.0"},
       {:httpoison, "~> 1.2"},
       {:jason, "~> 1.1"},
-      {:ex_campaign_monitor, "~> 0.1"}
+      {:ex_campaign_monitor, "~> 0.1"},
+      {:distillery, "~> 2.0"}
     ]
   end
 
