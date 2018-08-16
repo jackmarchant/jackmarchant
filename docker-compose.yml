@@ -1,0 +1,31 @@
+version: "3"
+services:
+  jack_marchant:
+    build:
+      context: .
+      dockerfile: ./dev.Dockerfile
+    ports:
+      - "4000:4000"
+    depends_on:
+      - postgres
+    environment:
+      MIX_ENV: prod
+      APP_VERSION: 1.0.6
+      PORT: 4000
+      HOSTNAME: localhost
+      DATABASE_URL: ecto://postgres:postgres@postgres:5432/jack_marchant_dev
+    volumes:
+      - .:/build:delegated
+  postgres:
+    image: postgres:9.6-alpine
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: jack_marchant_dev
+volumes:
+  postgres:
+    driver: local

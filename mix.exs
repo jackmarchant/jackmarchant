@@ -4,7 +4,7 @@ defmodule JackMarchant.Mixfile do
   def project do
     [
       app: :jack_marchant,
-      version: "1.0.3",
+      version: "1.0.6",
       elixir: "~> 1.6",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
