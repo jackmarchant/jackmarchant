@@ -38,6 +38,10 @@
 
 /* Post content */
 
+.post__content a {
+  color: #ff213b;
+}
+
 .post__content pre {
   background-color: #f7f9fc;
   border-radius: 3px;
