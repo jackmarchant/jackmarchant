@@ -3,6 +3,8 @@
 
 .post-listing {
   margin-bottom: 10px;
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 20px;
 }
 
 .post-listing__title {
@@ -13,6 +15,7 @@
 .post-listing__date {
   font-style: italic;
   font-size: 14px;
+  color: #ff213b;
 }
 
 .post-listing__blurb, .post-listing__date {
@@ -84,10 +87,18 @@
   font-family: 'PT Sans Narrow', sans-serif;
 }
 
+.button:hover {
+  background-color: #ff213b;
+}
+
 .button--read-more {
   margin-top: 12px;
   margin-bottom: 12px;
   display: inline-block;
+}
+
+.button--read-more:hover {
+  color: #ffffff;
 }
 
 /* Page */
@@ -98,6 +109,10 @@
 
 .social-link {
   margin-right: 8px;
+}
+
+.social-link:hover {
+  color: #fff;
 }
 
 /* Alerts */

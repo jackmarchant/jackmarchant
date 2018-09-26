@@ -10,6 +10,11 @@ p {
 
 a {
   color: #202020;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff213b;
 }
 
 .header__link {
@@ -21,16 +26,15 @@ a {
 }
 
 .footer__bio {
-  background-color: #f7f6f6;
-  border-left: 3px solid #202020;
+  background-color: #f5f5f5;
   margin-bottom: 48px;
   margin-top: 48px;
-  padding: 12px;
+  padding: 20px;
+  border-radius: 5px;
 }
 
-.footer__signup {
-  border-top: 1px solid #cccccc;
-  margin-top: 24px;
+.footer__bio a {
+  color: #ff213b;
 }
 
 .footer__signup p {
