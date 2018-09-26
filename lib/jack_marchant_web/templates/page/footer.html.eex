@@ -3,8 +3,9 @@
     <%= render @view_module, "subscribe-form.html", assigns %>
   </div>
   <div class="footer__bio">
+    <h2>About Jack</h2>
     <p>Hi, my name is Jack Marchant. I'm a Web Developer based in Sydney, Australia.
-      I found Elixir while working at <a href="https://expert360.com" target="_blank" rel="nofollow">Expert360</a> and
+      I found <a target="_blank" rel="nofollow" href="https://elixir-lang.org">Elixir</a> while working at <a href="https://expert360.com" target="_blank" rel="nofollow">Expert360</a> and
       so far have never looked back. I enjoy reading, writing and talking about code.
     </p>
   </div>
@@ -13,5 +14,5 @@
     <a class="button social-link" href="https://github.com/jackmarchant" target="_blank" rel="nofollow">GitHub</a>
     <a class="button social-link" href="https://www.linkedin.com/in/jack-marchant" target="_blank" rel="nofollow">LinkedIn</a>
   </div>
-  <p>Copyright &copy; <%= NaiveDateTime.utc_now().year %></p>
+  <p>Copyright JackMarchant &copy; <%= NaiveDateTime.utc_now().year %></p>
 </footer>

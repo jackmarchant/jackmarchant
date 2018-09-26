@@ -9,7 +9,7 @@ config :jack_marchant, JackMarchantWeb.Endpoint,
 
 config :jack_marchant, JackMarchant.Repo,
   adapter: Ecto.Adapters.Postgres,
-  pool_size: 10
+  pool_size: 1
 
 # Do not print debug messages in production
 config :logger, level: :info
