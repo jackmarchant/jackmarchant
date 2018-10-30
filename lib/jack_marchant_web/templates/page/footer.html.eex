@@ -4,9 +4,9 @@
   </div>
   <div class="footer__bio">
     <h2>About Jack</h2>
-    <p>Hi, my name is Jack Marchant. I'm a Web Developer based in Sydney, Australia.
-      I found <a target="_blank" rel="nofollow" href="https://elixir-lang.org">Elixir</a> while working at <a href="https://expert360.com" target="_blank" rel="nofollow">Expert360</a> and
-      so far have never looked back. I enjoy reading, writing and talking about code.
+    <p>Hi, my name is Jack Marchant. I'm a Software Engineer based in Sydney, Australia.
+      I've been working with Elixir for around 2 years and currently write code at <a target="_blank" rel="nofollow" href="https://vamp.me">Vamp</a>
+      I enjoy reading, writing and talking about code.
     </p>
   </div>
   <div class="footer__links">
