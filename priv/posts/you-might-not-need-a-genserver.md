@@ -27,7 +27,7 @@ This line has a couple of advantages:
 
 In contrast to `Task.start/1`, we can wait for the result, at some point in the future with `Task.async/1`:
 ```elixir
-task = Task.async(&my_function/1)
+task = Task.async(&my_function/0)
 # .. some other code
 result = Task.await(task)
 ``` 
