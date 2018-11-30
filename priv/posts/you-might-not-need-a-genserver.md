@@ -15,17 +15,17 @@ I have grown fond of GenServer's, along with the Elixir community, however there
 Let's take a quick look at the differences between a [Task](https://hexdocs.pm/elixir/Task.html) and a [GenServer](https://hexdocs.pm/elixir/GenServer.html) and figure out which module fits best.
 
 ### Task
-Tasks are a simple, yet powerful tool to change the way your code is executed and introduce somme light concurrency.
+Tasks are a simple, yet powerful tool to change the way your code is executed and introduce some light concurrency.
 
 You can run a function asynchronously, isolating any failures:
 ```elixir
-Task.async(fn -> raise "the roof" end)
+Task.start(fn -> raise "the roof" end)
 ```
 This line has a couple of advantages:
 - The Task will run in a new process, leaving you free to do all of those other things you wanted to get done.
 - Any failure or error raised in the course of running the function, will be isolated to the task's process, so your main process will not stop executing any code after the task.
 
-In contrast to this, we can wait for the result, at some point in the future:
+In contrast to `Task.start/1`, we can wait for the result, at some point in the future with `Task.async/1`:
 ```elixir
 task = Task.async(&my_function/1)
 # .. some other code
@@ -36,7 +36,7 @@ By using a Task in this way, we can defer the retrieval of the result and execut
 A Task will only execute one function in it's lifetime and isn't meant to be a long-running process, or be involved in any inter-process communication. The benefit of this is that it's much easier to write for one-off tasks and simpler to test. In most scenarios where you only want to run a function asynchronously, a task will suffice.
 
 ### Agent
-An [Agent](https://hexdocs.pm/elixir/Agent.html) is a process that abstracts state. If all you need is something to hold a value for a relatively short period of time (in memory), an agent is a perfect option. An Agent is actually a GenServer that has been abstracted into it's own module. So, while you get all the benefits of using a GenServer
+An [Agent](https://hexdocs.pm/elixir/Agent.html) is a process that abstracts state. If all you need is something to hold a value for a relatively short period of time (in memory), an agent is a perfect option. An Agent is actually a GenServer that has been abstracted into it's own module. So, while you get all the benefits of using a GenServer, you aren't required to set up the client-server interactions you're already familiar with.
 
 If we want to hold a value in an agent, you can store it using `Agent.get/3` and store values using `Agent.update/3`. These functions are already defined for you in the Agent API - functions you would have to define yourself, had you chosen to implement the same functionality with a GenServer.
 
