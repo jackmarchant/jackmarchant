@@ -31,8 +31,11 @@ The solution that (seems to work so far) I ended up going with wasn’t too far 
 
 As it is a GenServer that is spawning these tasks, it can handle generic messages sent to it quite easily with the [handle_info/2](https://hexdocs.pm/elixir/GenServer.html#c:handle_info/2) callback. This is where the GenServer handles success or failure states of each task, and processing each result synchronously is not a problem in this case. 
 
-(insert diagram and code examples)
+Here's a snippet of the GenServer that spawns these Task processes.
+<script src="https://gist.github.com/jackmarchant/e28cb2ed3767c8b5041fa5d37fe1d1fa.js"></script>
+
+What's interesting about this code is that it may actually be reimplementing something that already exists in Elixir, that I haven't quite got my head around yet - either way I haven't got a problem with doing it this way as long as it works! Wrapping the spawning of a Task in a GenServer simply provides the ability to "schedule" tasks (as each message is processed sequentially), while responding to the response from each task invidiually.
+
+In theory if we were to send a bunch of messages that get "queued" for processing in the GenServer's mailbox, a problem may arise where if the application terminates, the GenServer will lose all of it's messages and those tasks will be lost. At this point, however, I would prefer to see how much of a problem this turns out to be as there would be various factors to consider.
 
 I’m still not sure if this is going to be the best way to architect this asynchronous, concurrent behaviour, but in the few cases where I’ve thought an OTP approach makes sense I have often found many different ways to solve this kind of problem - which is both a good and bad part of Elixir.
-
-
