@@ -57,8 +57,8 @@ defmodule JackMarchant do
   end
 
   defp campaign_monitor_subscribe(%{email: email}) do
-    spawn(fn ->
-      {:ok, _} = ExCampaignMonitor.add_subscriber(%{email: email, consent_to_track: "Yes"})
+    Task.start(fn ->
+      {:ok, res} = ExCampaignMonitor.add_subscriber(%{email: email, consent_to_track: "Yes"})
       Logger.info(fn -> "Added subscriber to email list" end)
     end)
   end
