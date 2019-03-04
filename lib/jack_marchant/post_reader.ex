@@ -48,7 +48,7 @@ defmodule JackMarchant.PostReader do
     |> List.delete_at(-1)
     |> Enum.into(%{}, fn line ->
       [key, value] = String.split(line, ": ")
-      {String.to_atom(key), value}
+      {String.to_atom(key), String.trim(value)}
     end)
   end
 end
