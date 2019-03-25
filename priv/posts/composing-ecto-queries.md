@@ -4,6 +4,7 @@ published: true
 blurb: Ecto makes composing queries possible through query bindings. Let's take a look at how to compose queries through functions.
 slug: composing-ecto-queries
 published_date: 2018-07-06 18:00:00
+reading_time: 3
 ---
 
 [Ecto](https://github.com/elixir-ecto/ecto) is an Elixir library, which allows you to define schemas that map to database tables. It's a super light weight [ORM](https://en.wikipedia.org/wiki/Object-relational_mapping), (Object-Relational Mapper) that allows you to define structs to represent data. 

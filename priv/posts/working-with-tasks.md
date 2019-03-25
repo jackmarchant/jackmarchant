@@ -4,6 +4,7 @@ published: true
 blurb: Working with Tasks means understanding how to send and receive messages in Elixir. To familiarise myself with this concept, I create a simple (naive) Job module.
 slug: working-with-tasks-in-elixir
 published_date: 2018-07-26 09:00:00
+reading_time: 2
 ---
 
 While writing [Understanding Concurrency in Elixir](https://www.jackmarchant.com/articles/understanding-concurrency-in-elixir) I started to grasp processes more than I have before. Working with them more closely has strengthened the concepts in my own mind. 

@@ -4,6 +4,7 @@ published: true
 published_date: 2018-06-27 21:34:00
 blurb: Streams are a great way to lazily evaluate transformations on collections. Find out how and why you would use a Stream.
 slug: streaming-large-datasets-in-elixir
+reading_time: 3
 ---
 
 ## What is a Stream?

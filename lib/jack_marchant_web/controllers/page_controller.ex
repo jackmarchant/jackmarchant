@@ -15,7 +15,7 @@ defmodule JackMarchantWeb.PageController do
 
   def post(conn, %{"slug" => post_slug}) do
     post = JackMarchant.find_post_by_slug(post_slug)
-
+    {:ok, post} = JackMarchant.update_post(post, %{views: post.views + 1})
     render(conn, "post.html", post: post)
   end
 end

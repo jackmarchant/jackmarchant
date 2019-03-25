@@ -4,6 +4,7 @@ published: true
 blurb:  In this article, I will discuss a typical scenario of integrating with a third-party API and detail a potential approach you could use in your Elixir application.
 slug: integrating-third-party-libraries-in-elixir
 published_date: 2018-12-19 18:00:00
+reading_time: 5
 ---
 When we think about what an application does, it's typical to think of how it behaves in context of its dependencies. For example, we could say a ficticious application sync's data with a third-party CRM.
 The way we think about our application impacts how we make abstractions in our code. If we think about a typical web application, we might have a database, router, controllers and some business logic around how we use our data and show it on the page. In many cases, we need to integrate our app with external API's, third-party libraries and more. 

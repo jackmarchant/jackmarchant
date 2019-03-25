@@ -4,6 +4,7 @@ published: true
 published_date: 2017-12-21 12:18:00
 blurb: I describe my experiences with technical debt, and why it may not always be a good idea to "move quickly".
 slug: surviving-technical-debt
+reading_time: 2
 ---
 
 Technical debt is a potentially crippling disease that can take over your codebase without much warning. One day, you’re building features, the next, you struggle to untangle the mess you (or maybe your team) has created.

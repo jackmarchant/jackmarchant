@@ -4,6 +4,7 @@ published: true
 blurb: How to implement a Queue in Elixir
 slug: implement-a-queue-in-elixir
 published_date: 2018-06-09 20:08:00
+reading_time: 4
 ---
 
 A Queue is a collection data structure, which uses the FIFO (First In, First Out) method. This means that when you add items to a queue, often called enqueuing, the item takes its place at the end of the queue. When you dequeue an item, we remove the item from the front of the queue. 

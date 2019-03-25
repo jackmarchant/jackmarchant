@@ -55,6 +55,13 @@ defmodule JackMarchant do
         {:error, get_errors(changeset.errors)}
     end
   end
+  
+  @spec update_post(Post.t(), map()) :: {:ok, Post.t()} | {:error, Ecto.Changeset.t()}
+  def update_post(post, params) do
+    post
+    |> Post.changeset(params)
+    |> Repo.update()
+  end
 
   defp campaign_monitor_subscribe(%{email: email}) do
     Task.start(fn ->

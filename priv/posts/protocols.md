@@ -4,6 +4,7 @@ published: true
 blurb: Protocols are a way to implement polymorphism in Elixir. There are many use-cases for it, but I'll go through a typical example of interacting with an external API that needs data in a specific structure.
 slug: using-protocols-to-decouple-implementation-details
 published_date: 2018-09-26 00:00:00
+reading_time: 3
 ---
 
 Protocols are a way to implement polymorphism in Elixir. We can use it to apply a function to multiple object types or structured data types, which are specific to the object itself. There are two steps; defining a protocol in the form of function(s), and one or many implementations for that protocol.

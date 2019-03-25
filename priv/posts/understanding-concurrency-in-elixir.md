@@ -4,6 +4,7 @@ published: true
 blurb: Concurrency is one of the major drawcards for pulling people to the Elixir language. In this article I explain how to use concurrency at it's lowest level - with Processes.
 slug: understanding-concurrency-in-elixir
 published_date: 2018-07-14 09:00:00
+reading_time: 4
 ---
 
 Concurrency in Elixir is a big selling point for the language, but what does it really mean for the code that we write in Elixir? It all comes down to [Processes](https://hexdocs.pm/elixir/Process.html). Thanks to the Erlang Virtual Machine, upon which Elixir is built, we can create process threads that aren't actual processes on your machine, but in the Erlang VM. This means that in an Elixir application we can create thousands of Erlang processes without the application skipping a beat.

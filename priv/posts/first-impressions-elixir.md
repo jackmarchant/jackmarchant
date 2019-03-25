@@ -4,6 +4,7 @@ published: true
 blurb: I share my thoughts and initial experiences with Elixir, a functional programming language.
 slug: first-impressions-of-elixir
 published_date: 2017-01-06 10:00:00
+reading_time: 5
 ---
 
 Elixir is a functional programming language based on Erlang. I’m told it’s very similar to Ruby, with a few tweaks and improvements to the developer experience and language syntax.

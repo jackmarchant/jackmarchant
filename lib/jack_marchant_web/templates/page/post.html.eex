@@ -1,7 +1,18 @@
 <div class="post">
   <h2 class="post__title"><%= assigns.post.title %></h2>
-  <p class="post__date"><%= format_date(assigns.post.published_date) %></p>
+  <p class="post__date">
+    <%= format_date(assigns.post.published_date) %> 
+    &middot; <%= assigns.post.views %> views
+    <%= if assigns.post.reading_time do %>&middot; 
+      <%= assigns.post.reading_time %> min read 
+    <% end %>
+  </p>
   <div class="post__content"><%= raw assigns.post.content %></div>
 </div>
 
-<a class="button button--read-more" href="<%= page_path(@conn, :index) %>">See more articles</a>
+<p>
+<a href="https://twitter.com/intent/tweet?screen_name=jackmarchant10&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-size="large" data-text="<%= assigns.post.title %>" data-related="jackmarchant10" data-show-count="false">Tweet to @jackmarchant10</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>
+<p>
+  <a class="button button--read-more" href="<%= page_path(@conn, :index) %>">See more articles</a>
+</p>

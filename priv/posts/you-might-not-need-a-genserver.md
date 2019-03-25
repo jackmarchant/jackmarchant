@@ -4,6 +4,7 @@ published: true
 blurb: It can be confusing sometimes, to know when to use a GenServer. There are a couple of modules, including Task and Agent that may fit your purpose better.
 slug: you-might-not-need-a-genserver
 published_date: 2018-11-20 18:00:00
+reading_time: 3
 ---
 
 When you're browsing your way through Elixir documentation or reading blog posts (like this one), there's no doubt you'll come across a GenServer. It is perhaps one of the most overused modules in the Elixir standard library, simply because it's a good teaching tool for abstractions around processes. It can be confusing though, to know when to reach for your friendly, neighbourhood GenServer.

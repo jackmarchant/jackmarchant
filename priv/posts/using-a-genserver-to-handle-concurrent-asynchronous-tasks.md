@@ -4,6 +4,7 @@ published: true
 blurb: Inter-process communication can be tricky to get your head around. This article discusses an example of how it can be used to solve a real problem. 
 slug: using-a-genserver-to-handle-asynchronous-concurrent-tasks
 published_date: 2019-02-01 18:00:00
+reading_time: 4
 ---
 
 In most cases I have found inter-process communication to be an unnecessary overhead for the work I have been doing. Although Elixir is known for this (along with Erlang), it really depends on what you’re trying to achieve and processes shouldn’t be spawned just for the fun of it. I have recently come across a scenario where I thought having a separate process be responsible for performing concurrent and asynchronous jobs would be the best way to approach the problem. In this article I will explain the problem and the solution. 

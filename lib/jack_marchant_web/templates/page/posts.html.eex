@@ -5,7 +5,12 @@
 
   <div class="post-listing">
     <h3 class="post-listing__title"><a href="/articles/<%= post.slug %>"><%= post.title %></a></h3>
-    <p class="post-listing__date"><%= format_date(post.published_date) %></p>
+    <p class="post-listing__date">
+      <%= format_date(post.published_date) %>
+      <%= if post.reading_time do %>
+        &middot; <%= post.reading_time %> min read
+      <% end %>
+    </p>
     <p class="post-listing__blurb"><%= post.blurb %></p>
   </div>
 

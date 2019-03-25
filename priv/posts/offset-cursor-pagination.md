@@ -4,6 +4,7 @@ published: true
 published_date: 2018-10-30 08:22:00
 slug: offset-and-cursor-pagination-explained
 blurb: Pagination is a common concept in software development. Understanding the difference between offset and cursor pagination is critical to building or working with APIs.
+reading_time: 2
 ---
 
 Typically in an application with a database, you might have more records than you can fit on a page or in a single result set from a query. When you or your users want to retrieve the next page of results, two common options for paginating data include:

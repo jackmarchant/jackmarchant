@@ -4,6 +4,7 @@ published: true
 published_date: 2018-06-25 20:12:00
 blurb: Once again, I decided to rebuild my own website. This time, I decided to write about why.
 slug: yet-another-website-rebuild
+reading_time: 4
 ---
 
 Rather than getting stuck on an app idea itself, I’ve been in the habit of rebuilding my own personal website [jackmarchant.com](https://www.jackmarchant.com) in different languages, different technologies but for the most part it’s the same outcome. 

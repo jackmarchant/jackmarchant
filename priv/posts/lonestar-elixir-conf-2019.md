@@ -4,6 +4,7 @@ published: true
 blurb: Last weekend was Lonestar ElixirConf 2019. In this article I recap some of my personal highlights and favourite presentations from the conference.
 slug: lonestar-elixir-conf-2019-highlights
 published_date: 2019-03-04 22:00:00
+reading_time: 6
 ---
 
 Last week was Lonestar ElixirConf 2019 held in Austin, Texas. The conference ran over 2 days and was the first Elixir conference I had been to.

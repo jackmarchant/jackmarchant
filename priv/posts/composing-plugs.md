@@ -4,6 +4,7 @@ published: true
 blurb: A practical example demonstrating how to use Plugs in Elixir.
 slug: composing-elixir-plugs-in-a-phoenix-application
 published_date: 2018-03-23 20:08:00
+reading_time: 3
 ---
 
 Elixir is a functional language, so it’s no surprise that one of the main building blocks of the request-response cycle is the humble Plug. A Plug will take connection struct (see [Plug.Conn](https://hexdocs.pm/plug/Plug.Conn.html)) and return a new struct of the same type. It is this concept that allows you to join multiple plugs together, each with their own transformation on a Conn struct.

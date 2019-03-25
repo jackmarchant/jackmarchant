@@ -2,13 +2,18 @@ defmodule JackMarchant.Post do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @fields [
+  @required_fields [
     :title,
     :content,
     :slug,
     :blurb,
     :published_date,
-    :published
+    :published,
+  ]
+
+  @optional_fields [
+    :views,
+    :reading_time
   ]
 
   schema "post" do
@@ -18,14 +23,16 @@ defmodule JackMarchant.Post do
     field(:blurb, :string, null: false)
     field(:published_date, :naive_datetime)
     field(:published, :boolean)
+    field(:views, :integer)
+    field(:reading_time, :integer)
 
     timestamps()
   end
 
   def changeset(post, params) do
     post
-    |> cast(params, @fields)
-    |> validate_required(@fields)
-    |> unique_constraint(:slug, message: "slug: #{inspect(params.slug)} already exists for post")
+    |> cast(params, @required_fields ++ @optional_fields)
+    |> validate_required(@required_fields)
+    |> unique_constraint(:slug) 
   end
 end

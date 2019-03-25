@@ -4,6 +4,7 @@ published: true
 published_date: 2016-11-29 12:22:00
 slug: no-excuses-write-unit-tests
 blurb: Unit testing can sometimes be a tricky subject no matter what language you’re writing in. In this article, I explain how to get started with testing and stop making excuses for your team.
+reading_time: 6
 ---
 
 Unit testing can sometimes be a tricky subject no matter what language you’re writing in. There’s a few reasons for this:
