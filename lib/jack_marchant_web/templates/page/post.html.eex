@@ -11,7 +11,7 @@
 </div>
 
 <p>
-<a href="https://twitter.com/intent/tweet?screen_name=jackmarchant10&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-size="large" data-text="<%= assigns.post.title %>" data-related="jackmarchant10" data-show-count="false">Tweet to @jackmarchant10</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a href="https://twitter.com/intent/tweet?url=https://www.jackmarchant.com/articles/<%= assigns.post.slug %>&screen_name=jackmarchant10&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-size="large" data-text="<%= assigns.post.title %>" data-related="jackmarchant10" data-show-count="false">Share on Twitter</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </p>
 <p>
   <a class="button button--read-more" href="<%= page_path(@conn, :index) %>">See more articles</a>
